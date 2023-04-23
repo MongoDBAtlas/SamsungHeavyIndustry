@@ -40,7 +40,6 @@ __Agenda__
 
 5. __Atlas Serverless services__
     - Functions & Triggers
-    - Data API & GraphQL
     - Data Federation & Online Archive
     
      
