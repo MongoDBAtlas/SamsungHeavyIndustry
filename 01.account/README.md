@@ -56,7 +56,7 @@ Add IP Address를 클릭하고 Add IP Access List Entry 에서 Add current IP Ad
 Database 메뉴를 클릭 하면 생성된 데이터 베이스 클러스터를 볼 수 있습니다. 최초에는 데이터가 없음으로 클러스터 메뉴 버튼을 "..."을 클릭 하면 추가 메뉴 중 Load Sample Dataset 을 선택 합니다.   
 생성이 완료된 후 Browse Collections를 클릭하먄 데이터를 볼 수 있습니다.
 생성된 데이터 베이스는 sample_airbnb외 8개의 데이터베이스가 생성 되고 최소 1개 이상의 컬렉션(테이블)이 생성되게 됩니다.
-<img src="/01.account/images/images07.png" width="90%" height="90%"> 
+<img src="/01.account/images/images/images07.png" width="90%" height="90%"> 
 
 
 #### 기타 필요한 소프트웨어
