@@ -51,7 +51,7 @@ __Agenda__
 
 [0]: https://github.com/MongoDBAtlas/SamsungHeavyIndustry/tree/main/01.account
 
-[1]: https://github.com/MongoDBAtlas/SamsungHeavyIndustry/tree/main/01.Provision%20and%20CRUD
+[1]: https://github.com/MongoDBAtlas/SamsungHeavyIndustry/tree/main/02.Provision%20and%20CRUD
 
 
 [3]: https://github.com/MongoDBAtlas/SamsungHeavyIndustry/tree/main/03.index%20and%20aggregation
