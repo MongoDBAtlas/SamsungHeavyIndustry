@@ -44,8 +44,8 @@ __Agenda__
     
      
 - __Handson__  [GitHub][5]
-    - Data API
     - Functions
+    - online archive
 
 
 [0]: https://github.com/MongoDBAtlas/SamsungHeavyIndustry/tree/main/01.account
