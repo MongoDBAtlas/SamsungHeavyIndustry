@@ -1,10 +1,8 @@
 <img src="https://companieslogo.com/img/orig/MDB_BIG-ad812c6c.png?t=1648915248" width="50%" title="Github_Logo"/>
 
-# Data API(RESTful API) & Functions
+# Functions
 
 ### [&rarr; Create App Service](#create-app-service)
-
-### [&rarr; Data API](#data-api)
 
 ### [&rarr; Functions](#functions)
 
@@ -141,97 +139,6 @@
 - 상단의 `REVIEW DRAFT & DEPLOY` 클릭 후
 - 활성화 된 `Deployment Draft` 모달에서 `Deploy` 클릭 후
 - 잠시 후 상단에서 `Deployment was successful` 확인
-
-# Data API
-
-> **Requisites**
->
-> > [[App Service]](#create-app-service)  
-> > [[Postman]](https://www.postman.com/downloads/)
->
-> 테스트는 Bearer token 방식 인증을 사용하지않기 때문에 [[Postman web]](https://web.postman.co) 버전을 사용할 수 없다  
-> 반드시 로컬 설치버전 필요!!
-> <br>
-
-<br>
-
-- [Data API 시작](#enable-data-api)
-- [Postman 셋업](#postman)
-- [테스트](#run-data-api)
-
-<br>
-
-> [[Data API 공식 매뉴얼]](https://www.mongodb.com/docs/atlas/app-services/data-api/)
-
-## Enable Data API
-
-<br>
-
-![start](img-data/01.start.png)
-
-- 좌측 Apps 내비게이션 패널에서 `HTTPS Endpoints` 메뉴 진입
-- 상단 `Data API` 탭 선택 후
-- 아래 `Enable the Data API` 클릭
-
-<br>
-
-![config](img-data/02.config.png)
-
-- Endpoint URL가 단일 리전용 `https://<Region>.aws.data.mongodb-api.com/app/<App ID>/endpoint`임을 확인
-- Leave all settings unchanged but
-- Check `Create User Upon Authentication`
-- `Save` 클릭 후
-- `REVIEW DRAFT & DEPLOY` 클릭
-
-<br>
-
-![deploy](img-data/03.deploy.png)
-
-- 검토 후 `Deploy` 클릭
-- 상단의 `Deployment was successful!` 배너 확인
-
-## Postman
-
-<br>
-
-![pm new ws](img-fn/08.pm-new-ws.png)
-
-- Postman에서 새로운 워크스페이스 생성
-
-<br>
-
-![pm import](img-fn/09.pm-import.png)
-
-- 새로 생성된 워크스페이스에서 `Import` 클릭
-
-<br>
-
-![pm folder](img-fn/10.pm-folder.png)
-
-- 제공된 Atlast Training repo의 `postman` 폴더 오픈
-
-<br>
-
-![pm folder](img-fn/11.pm-import-2.png)
-
-- 제공된 Collections, Global env 모두 선택
-- `Import` 클릭
-
-<br>
-
-![pm env](img-fn/12.pm-env.png)
-
-- Import된 설정에서 `Environment` - `Globals` 환경변수 중  
-  `appId`, `region`, `apiKey` 가 현재 App Service의 설정 값과 동일한지 확인
-
-## Run Data API
-
-<br>
-
-![run req](img-data/08.req.png)
-
-- `auth-apiKey` collection의 `findOne` request를 실행(`Send`) 후 결과 확인
-- 다른 두 requests (`find`, `aggregate`)도 실행 후 결과를 확인한다
 
 # Functions
 
