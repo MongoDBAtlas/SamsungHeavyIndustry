@@ -137,7 +137,7 @@ const uri =mongodb+srv://atlas-account:<password>@cluster0.****.mongodb.net/myFi
 수정 대상 데이터의 ssn 및 수정할 데이터 항목을 확인 수정 하여 줍니다.
 `````
       const query = {"ssn":"123-456-0001"};
-      const updatedata ={$set:{email:"gildong@email.com"};
+      const updatedata ={$set:{email:"gildong@email.com"}};
 
 const result = await userCollection.updateOne(query, updatedata);
       
@@ -163,7 +163,7 @@ const uri =mongodb+srv://atlas-account:<password>@cluster0.****.mongodb.net/myFi
 `````
 
       const query = {"ssn":"123-456-0001"};
-      const updatedata ={$push:{Hobbies:"Reading"};
+      const updatedata ={$push:{Hobbies:"Reading"}};
 
 const result = await userCollection.updateOne(query, updatedata);
           
@@ -270,7 +270,7 @@ Atlas atlas-t0pzlo-shard-0 [primary] samsungheavy> let newUser=  {
 다음 데이터 베이스 명령으로 데이터를 생성 합니다.
 
 ````
-Atlas atlas-t0pzlo-shard-0 [primary] samsungheavy> db.handson.insertOne(newUser)
+Atlas atlas-t0pzlo-shard-0 [primary] samsungheavy> db.user.insertOne(newUser)
 {
   acknowledged: true,
   insertedId: ObjectId("64454591813babb209a83f4d")
@@ -293,7 +293,7 @@ Atlas atlas-t0pzlo-shard-0 [primary] samsungheavy>
 
 데이터를 조회 합니다
 ````
-Atlas atlas-t0pzlo-shard-0 [primary] samsungheavy> db.handson.find({ssn:"123-456-0001"})
+Atlas atlas-t0pzlo-shard-0 [primary] samsungheavy> db.user.find({ssn:"123-456-0001"})
 [
   {
     _id: ObjectId("64454591813babb209a83f4d"),
@@ -333,7 +333,7 @@ Atlas atlas-t0pzlo-shard-0 [primary] samsungheavy> let query = {"ssn":"123-456-0
 
 Atlas atlas-t0pzlo-shard-0 [primary] samsungheavy> let updatedata = { $set: { email: "gildong@email.com" } }
 
-Atlas atlas-t0pzlo-shard-0 [primary] samsungheavy> db.handson.updateOne(query,updatedata)
+Atlas atlas-t0pzlo-shard-0 [primary] samsungheavy> db.user.updateOne(query,updatedata)
 {
   acknowledged: true,
   insertedId: null,
@@ -346,7 +346,7 @@ Atlas atlas-t0pzlo-shard-0 [primary] samsungheavy> db.handson.updateOne(query,up
 
 데이터를 수정 결과를 확인 합니다. (이메일 주소가 수정 된 것을 확인 합니다)
 ````
-Atlas atlas-t0pzlo-shard-0 [primary] samsungheavy> db.handson.find({"ssn":"123-456-0001"})
+Atlas atlas-t0pzlo-shard-0 [primary] samsungheavy> db.user.find({"ssn":"123-456-0001"})
 [
   {
     _id: ObjectId("64454591813babb209a83f4d"),
@@ -386,7 +386,7 @@ Atlas atlas-t0pzlo-shard-0 [primary] samsungheavy> let query = {"ssn":"123-456-0
 
 Atlas atlas-t0pzlo-shard-0 [primary] samsungheavy> let updatedata ={$push:{Hobbies:"Reading"}}
 
-Atlas atlas-t0pzlo-shard-0 [primary] samsungheavy> db.handson.updateOne(query,updatedata)
+Atlas atlas-t0pzlo-shard-0 [primary] samsungheavy> db.user.updateOne(query,updatedata)
 {
   acknowledged: true,
   insertedId: null,
@@ -399,7 +399,7 @@ Atlas atlas-t0pzlo-shard-0 [primary] samsungheavy> db.handson.updateOne(query,up
 
 데이터를 수정 결과를 확인 합니다. (Hobby에 Reading이 추가되어 있음)
 ````
-Atlas atlas-t0pzlo-shard-0 [primary] samsungheavy> db.handson.find({"ssn":"123-456-0001"})
+Atlas atlas-t0pzlo-shard-0 [primary] samsungheavy> db.user.find({"ssn":"123-456-0001"})
 [
   {
     _id: ObjectId("64454591813babb209a83f4d"),
@@ -436,14 +436,14 @@ Atlas atlas-t0pzlo-shard-0 [primary] samsungheavy>
 삭제할 데이터를 수정 하여 줍니다.
 삭제할 데이터의 ssn 및 입력 하여줍니다.
 `````
-Atlas atlas-t0pzlo-shard-0 [primary] samsungheavy> db.handson.deleteOne({ssn:"123-456-0001"})
+Atlas atlas-t0pzlo-shard-0 [primary] samsungheavy> db.user.deleteOne({ssn:"123-456-0001"})
 { acknowledged: true, deletedCount: 1 }
 
 `````
 
 데이터를 확인 합니다.
 ````
-Atlas atlas-t0pzlo-shard-0 [primary] samsungheavy> db.handson.findOne({ssn:"123-456-0001"})
+Atlas atlas-t0pzlo-shard-0 [primary] samsungheavy> db.user.findOne({ssn:"123-456-0001"})
 null
 Atlas atlas-t0pzlo-shard-0 [primary] samsungheavy> 
 ````
@@ -481,7 +481,7 @@ const newUser = {
             Addresses:[{"Address Name":"Work","Street":"431, Teheran-ro GangNam-gu ","City":"Seoul", "Zip":"06159"}], 
             Phones:[{"type":"mobile","number":"010-5555-1234"}]
           };
-db.handson.insertOne(newUser);
+db.user.insertOne(newUser);
 }
 {
   acknowledged: true,
